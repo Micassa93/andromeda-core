@@ -120,11 +120,8 @@ pub fn deduct_payment(payments: &mut Vec<BankMsg>, to: String, amount: Coin) -> 
 
     match payment {
         Some(p) => {
-            match p {
-                BankMsg::Send { amount: am, .. } => {
-                    deduct_funds(am, amount)?;
-                }
-                _ => {}
+            if let BankMsg::Send { amount: am, .. } = p {
+                deduct_funds(am, amount)?;
             }
             Ok(true)
         }

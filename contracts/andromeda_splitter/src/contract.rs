@@ -261,9 +261,8 @@ mod tests {
             .save(deps.as_mut().storage, &String::from("incorrect_owner"))
             .unwrap();
         let res = execute(deps.as_mut(), env.clone(), info.clone(), msg.clone());
-        match res {
-            Ok(_ret) => assert!(false),
-            _ => {}
+        if let Ok(_ret) = res {
+            assert!(false)
         }
 
         CONTRACT_OWNER
@@ -372,9 +371,8 @@ mod tests {
             .save(deps.as_mut().storage, &String::from("incorrect_owner"))
             .unwrap();
         let res = execute(deps.as_mut(), env.clone(), info.clone(), msg.clone());
-        match res {
-            Ok(_ret) => assert!(false),
-            _ => {}
+        if let Ok(_ret) = res {
+            assert!(false)
         }
 
         CONTRACT_OWNER
@@ -435,9 +433,8 @@ mod tests {
             .save(deps.as_mut().storage, &String::from("incorrect_owner"))
             .unwrap();
         let res = execute(deps.as_mut(), env.clone(), info.clone(), msg.clone());
-        match res {
-            Ok(_ret) => assert!(false),
-            _ => {}
+        if let Ok(_ret) = res {
+            assert!(false)
         }
 
         CONTRACT_OWNER
@@ -550,9 +547,8 @@ mod tests {
             .save(deps.as_mut().storage, &String::from("incorrect_owner"))
             .unwrap();
         let res = execute(deps.as_mut(), env.clone(), info.clone(), msg.clone());
-        match res {
-            Ok(_ret) => assert!(false),
-            _ => {}
+        if let Ok(_ret) = res {
+            assert!(false)
         }
 
         CONTRACT_OWNER
